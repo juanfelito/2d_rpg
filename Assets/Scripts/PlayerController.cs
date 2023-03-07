@@ -74,8 +74,6 @@ public class PlayerController : MonoBehaviour
 
     public void PressedTest()
     {
-        //Vector3 inFront = transform.position + new Vector3(moveDirection.x, moveDirection.y, 0);
-        //Debug.DrawLine(transform.position, inFront, Color.red, 10f);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDirection, 1f, interactableLayer);
 
         if (hit.collider != null)

@@ -15,6 +15,12 @@ public class GameController : MonoBehaviour
         dialogManager.onHideDialog.AddListener(OnHideDialog);
     }
 
+    public void OnDisable()
+    {
+        dialogManager.onShowDialog.RemoveListener(OnShowDialog);
+        dialogManager.onHideDialog.RemoveListener(OnHideDialog);
+    }
+
     private void Update()
     {
         switch (state)
